@@ -1,0 +1,36 @@
+1. Crie uma classe chamada Aluno e declare duas propriedades para ela: nome e matrícula.
+class Aluno{
+    var nome:String = "Vinicius Benites"
+    var matricula:Int = 11900849
+}
+
+
+2.  Declare uma função chamada AssistirAula dentro da classe Aluno que receba como parâmetro o nome da matéria. Faça com que essa função retorne o texto “O Aluno <nome do aluno>, de matrícula nº <número da matrícula> está assistindo a aula <nome da matéria>”. Substitua as lacunas sinalizadas com ‘<>’ pelas propriedades da classe e pelo parâmetro da função. Antes de retornar o valor da função, verifique se o parâmetro da função possui algum valor preenchido. Caso o parâmetro não possua valor, faça com que a função retorne o seguinte texto: “O Aluno <nome do aluno>, de matrícula nº <número da matrícula> faltou à aula”
+class Aluno{
+    var nome:String = "Vinicius Benites"
+    var matricula:Int = 11900849
+    
+    fun AssistirAula(devAnd:String){
+        println("O aluno $nome de matrícula nº$matricula está assistindo a aula $devAnd.")
+    }
+    if(devAnd == null){
+        println("O Aluno $nome, de matrícula nº$matricula faltou à aula")
+    }
+}
+
+
+3. Na função Main, declare uma lista do tipo Aluno. Preencha o primeiro item dessa lista com o seu nome e a sua matrícula. Preencha a lista com os dados de mais 4 alunos fictícios. 
+fun main() {
+    println("Hello, world!!!")
+    var list: MutableList<Aluno> = mutableListOf<Aluno>("Vinicius11900849", "Anna11901480", "Pedro11901564", "Isabela12000540")
+}
+
+
+4. Na função Main, imprima no console o resultado da função AssistirAula de cada objeto da lista. Para percorrer todos os objetos da lista utilize a estrutura de repetição for. Informe o texto “Desenvolvimento Android” como parâmetro da função.
+fun main() {
+    println("Hello, world!!!")
+    var list: MutableList<Aluno> = mutableListOf<Aluno>("Vinicius11900849", "Anna11901480", "Pedro11901564", "Isabela12000540")
+    for (i in list){
+        println("Item: $i")
+    }
+}
